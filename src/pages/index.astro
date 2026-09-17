@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Hi, I'm Yashaswi.</h1>
+      <p>
+        This is where I'll be writing. Replace this paragraph with a short
+        intro once the About page content is in place.
+      </p>
+      <p>
+        Head to the <a href="/blog">blog</a> for posts, or read
+        <a href="/about">more about me</a>.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>

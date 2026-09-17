@@ -1,0 +1,61 @@
+---
+import { SITE_TITLE } from '../consts';
+
+const { pathname } = Astro.url;
+
+function isActive(path: string) {
+  if (path === '/') return pathname === '/';
+  return pathname.startsWith(path);
+}
+---
+
+<header>
+  <nav>
+    <a href="/" class="site-title">{SITE_TITLE}</a>
+    <div class="links">
+      <a href="/" class={isActive('/') ? 'active' : ''}>Home</a>
+      <a href="/blog" class={isActive('/blog') ? 'active' : ''}>Blog</a>
+      <a href="/about" class={isActive('/about') ? 'active' : ''}>About</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav {
+    max-width: var(--column-width);
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .site-title {
+    font-weight: 600;
+    color: var(--heading);
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .links a:hover,
+  .links a.active {
+    color: var(--link);
+  }
+</style>
