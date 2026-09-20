@@ -2,7 +2,11 @@
 title: 'Batman Day 2026: the facts nobody puts in the trivia lists'
 description: '85+ years of Batman, the day DC built around him, and the co-creator who never got paid for it.'
 pubDate: 'Sep 20 2026'
+heroImage: '../../assets/batman-cosplay-dragoncon-2012.jpg'
+heroImageAlt: 'A detailed armored Batman costume against a black background, worn at Dragon Con 2012'
 ---
+
+*Batman armor cosplay, Dragon Con 2012. Photo by Andrew Guyton, edited by Hic et nunc, licensed [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).*
 
 Yesterday was Batman Day, DC's yearly excuse to get every comic shop on the planet to stock something with a bat on it. It falls on the third Saturday of September every year, which is why the date moves: 2026's was September 19. It started in 2014 for Batman's 75th anniversary, and it's grown from a comics promotion into movie marathons, costume meetups, and midnight screenings.
 

@@ -8,7 +8,8 @@ import { Image } from 'astro:assets';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -19,13 +20,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main>
       <article>
-        {heroImage && <Image src={heroImage} alt="" width={1200} height={630} />}
+        {
+          heroImage && (
+            <Image
+              src={heroImage}
+              alt={heroImageAlt ?? ''}
+              width={1200}
+              height={630}
+            />
+          )
+        }
         <h1>{title}</h1>
         <div class="meta">
           <FormattedDate date={pubDate} />
           {
             updatedDate && (
-              <span> &middot; updated <FormattedDate date={updatedDate} /></span>
+              <span> - updated <FormattedDate date={updatedDate} /></span>
             )
           }
         </div>
